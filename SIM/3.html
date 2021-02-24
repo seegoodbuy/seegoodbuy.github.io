@@ -111,9 +111,20 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="https://seegoodbuy.com/topup.html" class="waves-effect waves-light">
+      
+      <i class="fas fa-file-invoice-dollar" style="zoom: 0.6;"></i>
+      
+      <span>话费充值</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a target="_blank" rel="noopener" href="https://www.naifei.shop/login?sid=i" class="waves-effect waves-light">
       
-      <i class="far fa-user-circle" style="zoom: 0.6;"></i>
+      <i class="fab fa-youtube" style="zoom: 0.6;"></i>
       
       <span>流媒体合租</span>
     </a>
@@ -239,9 +250,20 @@
         
         <li class="m-nav-item">
 	  
+		<a href="https://seegoodbuy.com/topup.html" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-file-invoice-dollar"></i>
+			
+			话费充值
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
 		<a target="_blank" rel="noopener" href="https://www.naifei.shop/login?sid=i" class="waves-effect waves-light">
 			
-			    <i class="fa-fw far fa-user-circle"></i>
+			    <i class="fa-fw fab fa-youtube"></i>
 			
 			流媒体合租
 		</a>
@@ -478,7 +500,7 @@
 </head>
 <body>
 <table style="border-collapse: collapse; width: 100%; background-color: #ffffff; border-color: #ced4d9; height: 262px;" border="1">
-<tbody>
+<table>
 <tr style="height: 21px;">
 <td style="width: 12.0064%; height: 42px; text-align: center;" rowspan="2"><span style="background-color: #ffffff;"><strong>代码</strong></span></td>
 <td style="width: 87.9936%; height: 21px; text-align: center;">3</td>
@@ -529,7 +551,7 @@
 <tr style="height: 21px;">
 <td style="width: 87.9936%; height: 21px; text-align: center;">合作物流为顺丰速运，物流时效以顺丰为准。</td>
 </tr>
-</tbody>
+</table>
 </table>
 </body>
 </html>
@@ -548,7 +570,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">SeeGoodBuy</a>
+                    <a href="https://seegoodbuy.com" rel="external nofollow noreferrer">SeeGoodBuy</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -569,9 +591,9 @@
                 </span>
                 <span class="reprint-info">
                     本站所有产品除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY-NC 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">SeeGoodBuy</a>
+                    <a href="https://seegoodbuy.com" target="_blank">SeeGoodBuy</a>
                     !
                 </span>
             </div>
@@ -871,6 +893,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('10')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: SeeGoodBuy<br />'
+            + '产品作者: SeeGoodBuy<br />'
+            + '产品链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本产品归SeeGoodBuy所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
