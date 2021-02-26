@@ -503,24 +503,24 @@
 <div onload="init()">
 <form enctype="text/plain" name="contact_us_form" accept-charset="utf-8">
 <!-- 寄件者充值卡类    -->
-<input id="nameText" type="text" name="Name" value size="60" placeholder="请在此填写您充值的卡片类型，如类型为1，则填“1”即可" required>
+<input id="nameText" type="text" name="Name" value size="60" placeholder="请在此填写卡片所属代码，如“1”" required>
 <!-- required 必填栏位 ，placeholder 预设内容-->
 
 <!-- 寄件者充值号码 -->
-<input id="emailText" type="email" name="Email" value size="60" placeholder="请在此填写您要充值的号码，例如85212345678" required>
+<input id="emailText" type="email" name="Email" value size="60" placeholder="请在此填写所要充值号码，如+85212345678" required>
 
 <!-- 寄件者充值金额 -->
 <p><input id="telText" type="tel" name="Phone" value size="60" aria-invalid="false"
-placeholder="请在此填写您支付的实际费用" required></p>
+placeholder="请在此填写您实际的支付金额" required></p>
 <!-- 支付宝订单号 -->
 <p><input id="subText" type="text" name="Subject" value size="60" aria-invalid="false"
-placeholder="请点击下方的购买按钮，扫描付款。并将支付后提示的订单号填入此框，该订单号将被设置为邮件标题" required></p>
+placeholder="在此填写支付宝交易订单号(会作为邮件标题)" required></p>
 <!-- 邮件内容 -->
 <p><textarea id="bodyText" name="your-message" cols="40" rows="10" aria-required="true"
 aria-invalid="false" placeholder="您可以在此输入您顺便想说的话，例如备注等" required></textarea></p>
 <!-- 传送按钮 -->
 <div>
-<input type="button" value="发送邮件" onclick="submitHandler();">
+<input type="button" value="发送邮件(用来提交您的充值需求)" onclick="submitHandler();">
 <a id="mailTo"></a>
 <input type="button" value="清空内容" onclick="blank()">
 </div>
@@ -861,12 +861,12 @@ function blank() {save=document.contact_us_form.nameText.value,document.contact_
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%BE%B3%E9%97%A8%E6%89%8B%E6%9C%BA%E5%8D%A1/">
-                        <span class="chip bg-color">澳门手机卡</span>
-                    </a>
-                    
                     <a href="/tags/%E4%B8%8A%E5%8F%B0%E5%8D%A1/">
                         <span class="chip bg-color">上台卡</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%BE%B3%E9%97%A8%E6%89%8B%E6%9C%BA%E5%8D%A1/">
+                        <span class="chip bg-color">澳门手机卡</span>
                     </a>
                     
                 </div>
