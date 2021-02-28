@@ -214,9 +214,9 @@
               
                 <li>
 
-                  <a href="/categories/%E6%89%8B%E6%9C%BA%E5%8D%A1/ " style="margin-left:75px">
+                  <a href="/categories/%E6%89%8B%E6%9C%BA%E5%8D%A1/ " style="margin-left:50px">
 				  
-				   <i class="fa fas fa-sim-card" style="position: absolute;left:50px" ></i>
+				   <i class="fa fas fa-sim-card" style="position: absolute;left:28px" ></i>
 			      
 		          <span>Sim</span>
                   </a>
@@ -315,6 +315,112 @@
 
 </header>
 
+<!-- 添加夜间模式 -->
+<style>
+    body.dark .fas,
+    body.dark .title,
+    body.dark .row .text,
+    body.dark article .article-content .summary,
+    body.dark .card .card-image .card-title,
+    body.dark .fa-moon-o:before,
+    body.dark .fa-lightbulb-o:before,
+    body.dark article .article-tags .chip,
+    body.dark .chip-container .tag-title,
+    body.dark div.jqcloud a,
+    body.dark .friends-container .tag-title,
+    body.dark .frind-ship .title h1,
+    body.dark .card .card-content p,
+    body.dark .v[data-class=v] .vcount,
+    body.dark .v[data-class=v] .vcount .vnum,
+    body.dark pre code,
+    body.dark h1,
+    body.dark h2,
+    body.dark h3,
+    body.dark h4,
+    body.dark h5,
+    body.dark h6,
+    body.dark li,
+    body.dark p,
+    body.dark header .side-nav .mobile-head .logo-name,
+    body.dark header .side-nav .mobile-head .logo-desc,
+    body.dark header .side-nav .menu-list a,
+    body.dark .bg-cover .post-title,
+    body.dark a
+    {
+        color: rgba(255, 255, 255, 0.397);
+    }
+
+    /* 背景颜色变灰色 */
+    body.dark .card,
+    body.dark .block-with-text:after
+    {
+        background-color: #282c34;
+    }
+    /* 背景颜色变黑色 */
+    body.dark,
+    body.dark .v[data-class=v] .vcount,
+    body.dark #rewardModal .modal-content,
+    body.dark .modal,
+    body.dark header .side-nav,
+    body.dark header .side-nav .menu-list .m-nav-show,
+    body.dark #toc-content,
+    body.dark .toc-asidet
+    {
+        background-color: #12121c;
+    }
+
+    /* 改变透明度 */
+    body.dark .aplayer{background: #2f3742!important;}
+    body.dark img, body.dark strong {
+        filter: brightness(.7);
+    }
+
+
+    .darkmode-toggle {
+        z-index: 600;
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+
+</style>
+
+<!-- 添加夜间模式 -->
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+<script>
+    var options = {
+        bottom: "72px",                 // default: '32px' 调整高度
+        right: "17px",                  // default: '32px' 调整左右距离
+        left: "unset",                  // default: 'unset'
+        time: "0.5s",                   // default: '0.3s'
+        mixColor: "#fff",               // default: '#fff'
+        backgroundColor: "#fff",        // default: '#fff'
+        buttonColorDark: "#262728",     // default: '#100f2c'
+        buttonColorLight: "#fff",       // default: '#fff'
+        saveInCookies: true,            // default: true,
+        label: "🌓",                    // default: ''
+        autoMatchOsTheme: false,         // default: true
+
+    };
+    let darkmode = new Darkmode(options);
+    darkmode.showWidget()
+
+
+    $("document").ready(function () {
+        if (darkmode.isActivated()) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
+        }
+    });
+
+    $(".darkmode-toggle").click(function () {
+        if (darkmode.isActivated()) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
+        }
+    });
+</script>
     <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -376,19 +482,19 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/%E9%A6%99%E6%B8%AF%E6%B5%81%E9%87%8F%E5%8D%A1/" title="香港流量卡: 1">
+                <a href="/tags/%E6%B3%B0%E5%9B%BD%E6%89%8B%E6%9C%BA%E5%8D%A1/" title="泰国手机卡: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="香港流量卡" style="background-color: #F9EBEA;">香港流量卡
+                            data-tagname="泰国手机卡" style="background-color: #F9EBEA;">泰国手机卡
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E6%B3%B0%E5%9B%BD%E6%89%8B%E6%9C%BA%E5%8D%A1/" title="泰国手机卡: 1">
+                <a href="/tags/%E9%A6%99%E6%B8%AF%E6%B5%81%E9%87%8F%E5%8D%A1/" title="香港流量卡: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="泰国手机卡" style="background-color: #F5EEF8;">泰国手机卡
+                            data-tagname="香港流量卡" style="background-color: #F5EEF8;">香港流量卡
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -412,29 +518,20 @@
                 </a>
                 
                 
-                <a href="/tags/%E5%90%88%E7%BA%A6%E5%8D%A1/" title="合约卡: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="合约卡" style="background-color: #FEF9E7;">合约卡
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E7%BE%8E%E5%9B%BD%E6%89%8B%E6%9C%BA%E5%8D%A1/" title="美国手机卡: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="美国手机卡" style="background-color: #F8F9F9;">美国手机卡
+                            data-tagname="美国手机卡" style="background-color: #FEF9E7;">美国手机卡
                         <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E9%A6%99%E6%B8%AF%E6%89%8B%E6%9C%BA%E5%8D%A1/" title="香港手机卡: 4">
+                <a href="/tags/%E5%90%88%E7%BA%A6%E5%8D%A1/" title="合约卡: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="香港手机卡" style="background-color: #82E0AA;">香港手机卡
-                        <span class="tag-length">4</span>
+                            data-tagname="合约卡" style="background-color: #F8F9F9;">合约卡
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -442,8 +539,17 @@
                 <a href="/tags/%E5%85%A8%E7%90%83%E5%90%88%E7%BA%A6%E5%8D%A1/" title="全球合约卡: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="全球合约卡" style="background-color: #D7BDE2;">全球合约卡
+                            data-tagname="全球合约卡" style="background-color: #82E0AA;">全球合约卡
                         <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E9%A6%99%E6%B8%AF%E6%89%8B%E6%9C%BA%E5%8D%A1/" title="香港手机卡: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="香港手机卡" style="background-color: #D7BDE2;">香港手机卡
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -498,7 +604,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"香港流量卡","weight":1,"link":"/tags/香港流量卡/"},{"text":"泰国手机卡","weight":1,"link":"/tags/泰国手机卡/"},{"text":"上台卡","weight":2,"link":"/tags/上台卡/"},{"text":"澳门手机卡","weight":4,"link":"/tags/澳门手机卡/"},{"text":"合约卡","weight":1,"link":"/tags/合约卡/"},{"text":"美国手机卡","weight":2,"link":"/tags/美国手机卡/"},{"text":"香港手机卡","weight":4,"link":"/tags/香港手机卡/"},{"text":"全球合约卡","weight":1,"link":"/tags/全球合约卡/"},{"text":"0月租","weight":4,"link":"/tags/0月租/"},{"text":"英国手机卡","weight":1,"link":"/tags/英国手机卡/"},{"text":"ESIM","weight":1,"link":"/tags/ESIM/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"泰国手机卡","weight":1,"link":"/tags/泰国手机卡/"},{"text":"香港流量卡","weight":1,"link":"/tags/香港流量卡/"},{"text":"上台卡","weight":2,"link":"/tags/上台卡/"},{"text":"澳门手机卡","weight":4,"link":"/tags/澳门手机卡/"},{"text":"美国手机卡","weight":2,"link":"/tags/美国手机卡/"},{"text":"合约卡","weight":1,"link":"/tags/合约卡/"},{"text":"全球合约卡","weight":1,"link":"/tags/全球合约卡/"},{"text":"香港手机卡","weight":4,"link":"/tags/香港手机卡/"},{"text":"0月租","weight":4,"link":"/tags/0月租/"},{"text":"英国手机卡","weight":1,"link":"/tags/英国手机卡/"},{"text":"ESIM","weight":1,"link":"/tags/ESIM/"}], {
         autoResize: true
     });
 </script>
@@ -510,7 +616,7 @@
 
     <footer class="page-footer bg-color">
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -539,6 +645,50 @@
             </span>
             
             <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2019";
+                    var startMonth = "10";
+                    var startDate = "29";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
             
             <br>
             
@@ -750,6 +900,11 @@ $(function () {
     <!--腾讯兔小巢-->
     
     
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
 
     
 
@@ -763,7 +918,3 @@ $(function () {
 
 </html>
 
-<!--动态线条背景-->
-<script type="text/javascript"
-color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-</script>
