@@ -682,7 +682,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["澳门手机卡","香港手机卡","0月租","上台卡","美国手机卡","香港流量卡","泰国手机卡","合约卡","全球合约卡","ESIM"]
+                data: ["澳门手机卡","香港手机卡","0月租","上台卡","美国手机卡","香港流量卡","泰国手机卡","合约卡","全球合约卡","英国手机卡"]
             }
         ],
         yAxis: [
@@ -871,6 +871,12 @@
             
             
             
+            <a href="/tags/%E6%B3%B0%E5%9B%BD%E6%89%8B%E6%9C%BA%E5%8D%A1/">
+                <span class="chip center-align waves-effect waves-light chip-default">泰国手机卡</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E4%B8%8A%E5%8F%B0%E5%8D%A1/">
                 <span class="chip center-align waves-effect waves-light chip-default">上台卡</span>
             </a>
@@ -879,12 +885,6 @@
             
             <a href="/tags/%E6%BE%B3%E9%97%A8%E6%89%8B%E6%9C%BA%E5%8D%A1/">
                 <span class="chip center-align waves-effect waves-light chip-default">澳门手机卡</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%B3%B0%E5%9B%BD%E6%89%8B%E6%9C%BA%E5%8D%A1/">
-                <span class="chip center-align waves-effect waves-light chip-default">泰国手机卡</span>
             </a>
             
             
@@ -919,14 +919,14 @@
             
             
             
-            <a href="/tags/ESIM/">
-                <span class="chip center-align waves-effect waves-light chip-default">ESIM</span>
+            <a href="/tags/%E8%8B%B1%E5%9B%BD%E6%89%8B%E6%9C%BA%E5%8D%A1/">
+                <span class="chip center-align waves-effect waves-light chip-default">英国手机卡</span>
             </a>
             
             
             
-            <a href="/tags/%E8%8B%B1%E5%9B%BD%E6%89%8B%E6%9C%BA%E5%8D%A1/">
-                <span class="chip center-align waves-effect waves-light chip-default">英国手机卡</span>
+            <a href="/tags/ESIM/">
+                <span class="chip center-align waves-effect waves-light chip-default">ESIM</span>
             </a>
             
             
@@ -1242,6 +1242,34 @@ $(function () {
     
 
     
+        <script src="//code.tidio.co/1xtlyrx6guebrwsfquf0smibb4xelywk.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
 
     
 
@@ -1265,5 +1293,3 @@ $(function () {
 </body>
 
 </html>
-
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="9edac8b3-0be8-4e64-bd47-e02aca826e91";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
